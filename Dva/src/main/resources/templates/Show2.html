@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div  th:each="ol:${post}">
+
+  <p th:text="'Имя='+${ol.name}"></p>
+  <p th:text="'Автор='+${ol.avtor}"></p>
+  <p th:text="'Год='+${ol.year}"></p>
+  <p th:text="'Кол-во='+${ol.count }"></p>
+  <p th:text="'Цена='+${ol.price}"></p>
+    <p>_________________________________________________</p>
+</div>
+<a href="/add2">Добавить новую запись</a>
+<a href="/search2">Поиск по имени(не точный)</a>
+<a href="/" type="button">GO BACK</a>
+</body>
+</html>

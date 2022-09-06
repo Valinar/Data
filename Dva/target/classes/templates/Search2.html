@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Фильтрация</h2>
+<form method="post" th:action="${'/search2'}">
+    <input type="text" name="title">
+    <button type="submit">Найти</button>
+    <div  th:each="ol:${result}">
+    <p th:text="'Имя='+${ol.name}"></p>
+    <p th:text="'Автор='+${ol.avtor}"></p>
+    <p th:text="'Год='+${ol.year}"></p>
+    <p th:text="'Кол-во='+${ol.count }"></p>
+    <p th:text="'Цена='+${ol.price}"></p>
+    </div>
+</form>
+<a href="/show2" type="button">GO BACK</a>
+</body>
+</html>
